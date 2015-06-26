@@ -1,0 +1,31 @@
+/******************************************************
+   Mixins
+******************************************************/
+
+//  ---------------- CLEARFIX  //
+@mixin clearfix {
+    zoom: 1;
+    &:before,
+    &:after {
+        content: " ";    
+        display: block;    
+        height: 0;    
+        overflow: hidden; 
+        clear:both;
+    }
+}
+
+//  ---------------- FONT-FACE  //
+@mixin font-face($font-family, $font-folder, $file-name, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('fonts/#{$font-folder}/#{$file-name}.eot');
+      src: url('fonts/#{$font-folder}/#{$file-name}.eot?#iefix') format('embedded-opentype'),
+           url('fonts/#{$font-folder}/#{$file-name}.woff') format('woff'),
+           url('fonts/#{$font-folder}/#{$file-name}.ttf') format('truetype'),
+           url('fonts/#{$font-folder}/#{$file-name}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+// USAGE @include font-face('Nom de la font', 'Dossier', 'Nom du fichier sans extension', 'Font-weight', 'Font-style');
