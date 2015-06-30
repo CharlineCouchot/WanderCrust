@@ -1,8 +1,35 @@
 /* GRILLE
 ---------------------------------------------------- */
+@import "neat/neat-helpers";
 
-$max-width: 100%;
+$grid-columns: 12;
+$gutter:20px;
+$max-width: 1170px;
+$visual-grid:true;
 
-$desktop:  new-breakpoint(min-width 1200px);
-$tablet-h: new-breakpoint(min-width 1024px);
-$tablet-v: new-breakpoint(min-width 680px);
+$desktop: 			new-breakpoint(min-width 1200px 12);
+$tablet-desktop: 	new-breakpoint(min-width 768px 12);
+$tablet: 			new-breakpoint(min-width 768px max-width 1199px	8);
+$tablet-mobile: 	new-breakpoint(max-width 1199px	8);
+$mobile: 			new-breakpoint(max-width 767px 	4);
+
+/* TYPOS 
+---------------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+$fontRuda: 			'Ruda', sans-serif;
+$fontRoboto:		'Roboto Condensed', sans-serif;
+
+
+/* COULEURS
+---------------------------------------------------- */
+$clrOrange:			#f04f2d ;
+$clrOrangeActive:	darken($clrOrange, 5%);
+$clrYellow:			#ffcd3f;
+$clrWhite:			#ffffff;
+$clrBgLightGrey:	#f1f1f1;
+$clrBgMediumGrey:	#f1f1f1;
+$clrBgDarkGrey:		#c0c0c0;
+$clrTitlesGrey:		#272727;
+$clrBorderGrey:		#c6c6c6;
