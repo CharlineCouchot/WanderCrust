@@ -1,0 +1,31 @@
+/******************************************************
+	 ELEMENTS DE STYLES RECURRENTS
+******************************************************/
+
+/* SOMMAIRE
+---------------------------------------------------- */
+/* Sommaire : ctrl+F les intitulés suivants pour retrouver les parties concernées */
+
+// GENERALITÉS
+// HELPERS RESPONSIVE
+
+
+/* GENERALITÉS
+---------------------------------------------------- */
+
+// DISPLAY & OVERFLOW
+.block { display: block !important; }
+.inline-block { display: inline-block !important; }
+.hide { display:none !important; }
+.overflow-y-auto { position: relative; overflow: hidden; overflow-y: auto; }
+.overflow-hidden { position: relative; overflow: hidden; }
+.clearfix {@include clearfix;}
+
+// FLOTTEMENT
+.right { float: right !important; }
+.left { float: left !important; }
+
+// IMAGES
+img.right { margin:5px 0 5px 5px; }
+img.left { margin: 5px 5px 5px 0; }
+img {max-width:100%}
