@@ -53,6 +53,13 @@
 							<li><a href="">Autour de moi</a></li>
 						</ul>
 					</nav>
+					<div class="header--search">
+						<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<input id="search-box" class="search-box" type="text" placeholder="<?php echo _e('Saisissez un mot clé puis tapez Entrée', 'sbs'); ?>" value="<?php echo get_search_query(); ?>" name="s" id="s" />
+							<label for="search-box" class="search-icon-label"><span class="fa fa-search search-icon"></span></label>
+							<input type="submit" class="search-submit" id="search-submit" />
+						</form>
+					</div>
 				</div>
 			</section>
 		</header>
