@@ -39,6 +39,7 @@ html {
 }
 
 html, button, input, select, textarea {
+  font-family: sans-serif;
   outline:0;
 }
 ol, ul {
@@ -47,6 +48,9 @@ ol, ul {
 a {
   &:focus {
     outline: none;
+    // Webkit
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
   }
 
   &:hover, &:active {
@@ -58,7 +62,7 @@ abbr[title] {
   border-bottom: 1px dotted;
 }
 
-b, strong, label {
+label {
   font-weight: normal;
 }
 
@@ -194,8 +198,4 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-i, em {
-  font-style:normal !important;
 }

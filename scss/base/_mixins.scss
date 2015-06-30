@@ -29,3 +29,20 @@
   }
 }
 // USAGE @include font-face('Nom de la font', 'Dossier', 'Nom du fichier sans extension', 'Font-weight', 'Font-style');
+
+//  ---------------- CONTAINERS //
+@mixin container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:10px;
+  padding-right:10px;
+  @include clearfix;
+
+  @include media($desktop) {
+    max-width: 1170px;
+    padding-left:15px;
+    padding-right:15px;
+  @include box-sizing(content-box);
+  }
+}
