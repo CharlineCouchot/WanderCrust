@@ -29,3 +29,18 @@
 img.right { margin:5px 0 5px 5px; }
 img.left { margin: 5px 5px 5px 0; }
 img {max-width:100%}
+
+//FLAGS
+.icon-country {
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+	display:block;
+	width:30px;
+	height:20px;
+	&.us {background-image:url('flags/us.png')}
+	&.uk {background-image:url('flags/uk.png')}
+	&.fr {background-image:url('flags/fr.png')}
+	&.br {background-image:url('flags/br.png')}
+	&.sp {background-image:url('flags/sp.png')}
+}

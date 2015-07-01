@@ -16,10 +16,13 @@
 		<header class="header">
 			<section class="header--smallbar">
 				<div>
+					<div class="header--logo">
+						<h1><a href=""><img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png" alt="WanderCrust"></a></h1>
+					</div>
 					<ul class="header--smallbar_languages">
-						<li class="fr active"><a href="">Français</a></li>
-						<li class="en"><a href="">Anglais</a></li>
-						<li class="sp"><a href="">Espagnol</a></li>
+						<li><a href="" class="icon-country fr active">Français</a></li>
+						<li><a href="" class="icon-country uk">Anglais</a></li>
+						<li><a href="" class="icon-country sp">Espagnol</a></li>
 					</ul>
 					<nav class="header--smallbar_usernav">
 						<ul>
@@ -31,16 +34,12 @@
 			</section>
 			<section class="header--mainbar">
 				<div>
-					<div class="header--logo_container">
-						<div class="header--logo">
-							<h1><a href=""><img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png" alt="WanderCrust"></a></h1>
-						</div>
-					</div>
+					
 					<nav class="header--mainnav">
 						<ul>
 							<li><a href="">Accueil</a></li>
 							<li><a href="">Présentation</a></li>
-							<li><a href="">Les restaurants</a></li>
+							<li class="active"><a href="">Les restaurants</a></li>
 							<li><a href="">Autour de moi</a></li>
 						</ul>
 					</nav>
@@ -290,73 +289,75 @@
 		</section>
        
         <footer class="footer">
-			<section class="footer--column bestRated">
-				<h3>Les mieux notés</h3>
-				<ul>
-					<li class="bestRated--item">
-						<a href="">
-						<div class="bestRated--image">
-							<img src="images/bestrated_01.jpg" srcset="images/bestrated_01.jpg 1x, images/bestrated_01@2x.jpg 2x" alt="Nom de restaurant" alt="">
-						</div>
-						<div class="bestRated--details">
-							<h4 class="bestRated--title">Nom du restaurant</h4> 
-							<span class="bestRated--note">6/10</span>
-							<p class="bestRated--location">San Francisco, CA (USA)</p>
-						</div>
-						</a>
-					</li>
-					<li class="bestRated--item">
-						<a href="">
-						<div class="bestRated--image">
-							<img src="images/bestrated_02.jpg" srcset="images/bestrated_02.jpg 1x, images/bestrated_02@2x.jpg 2x" alt="Nom de restaurant" alt="">
-						</div>
-						<div class="bestRated--details">
-							<h4 class="bestRated--title">Nom du restaurant</h4> 
-							<span class="bestRated--note">6/10</span>
-							<p class="bestRated--location">San Francisco, CA (USA)</p>
-						</div>
-						</a>
-					</li>
-					<li class="bestRated--item">
-						<a href="">
-						<div class="bestRated--image">
-							<img src="images/bestrated_03.png" srcset="images/bestrated_03.jpg 1x, images/bestrated_03@2x.jpg 2x" alt="Nom de restaurant" alt="">
-						</div>
-						<div class="bestRated--details">
-							<h4 class="bestRated--title">Nom du restaurant</h4> 
-							<span class="bestRated--note">6/10</span>
-							<p class="bestRated--location">San Francisco, CA (USA)</p>
-						</div>
-						</a>
-					</li>
-				</ul>
-			</section>
-			<section class="footer--column tags">
-				<h3>Mots-clés</h3>
-				<ul>
-					<li class="tag"><a href="">Mot-clé</a></li>
-					<li class="tag"><a href="">Lorem ipsum</a></li>
-					<li class="tag"><a href="">Mot-clé</a></li>
-					<li class="tag"><a href="">Lorem ipsum</a></li>
-					<li class="tag"><a href="">Mot-clé</a></li>
-					<li class="tag"><a href="">Lorem ipsum</a></li>
-					<li class="tag"><a href="">Mot-clé</a></li>
-					<li class="tag"><a href="">Lorem ipsum</a></li>
-					<li class="tag"><a href="">Mot-clé</a></li>
-					<li class="tag"><a href="">Lorem ipsum</a></li>
-					<li class="tag"><a href="">Mot-clé</a></li>
-					<li class="tag"><a href="">Lorem ipsum</a></li>
-				</ul>
-			</section>
-			<section class="footer--column">
-				<h3>Méta</h3>
-				<ul>
-					<li><a href="#">Contactez-nous</a></li>
-					<li><a href="#">Mentions légales</a></li>
-					<li><a href="#">Politique de confidentialité</a></li>
-					<li><a href="#">FAQ</a></li>
-				</ul>
-			</section>
+			<div>
+				<section class="footer--column bestRated">
+					<h3>Les mieux notés</h3>
+					<ul>
+						<li class="bestRated--item">
+							<a href="">
+							<div class="bestRated--image">
+								<img src="images/bestrated_01.jpg" srcset="images/bestrated_01.jpg 1x, images/bestrated_01@2x.jpg 2x" alt="Nom de restaurant" alt="">
+							</div>
+							<div class="bestRated--details">
+								<h4 class="bestRated--title">Nom du restaurant</h4> 
+								<span class="bestRated--note">6/10</span>
+								<p class="bestRated--location">San Francisco, CA (USA)</p>
+							</div>
+							</a>
+						</li>
+						<li class="bestRated--item">
+							<a href="">
+							<div class="bestRated--image">
+								<img src="images/bestrated_02.jpg" srcset="images/bestrated_02.jpg 1x, images/bestrated_02@2x.jpg 2x" alt="Nom de restaurant" alt="">
+							</div>
+							<div class="bestRated--details">
+								<h4 class="bestRated--title">Nom du restaurant</h4> 
+								<span class="bestRated--note">6/10</span>
+								<p class="bestRated--location">San Francisco, CA (USA)</p>
+							</div>
+							</a>
+						</li>
+						<li class="bestRated--item">
+							<a href="">
+							<div class="bestRated--image">
+								<img src="images/bestrated_03.png" srcset="images/bestrated_03.jpg 1x, images/bestrated_03@2x.jpg 2x" alt="Nom de restaurant" alt="">
+							</div>
+							<div class="bestRated--details">
+								<h4 class="bestRated--title">Nom du restaurant</h4> 
+								<span class="bestRated--note">6/10</span>
+								<p class="bestRated--location">San Francisco, CA (USA)</p>
+							</div>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<section class="footer--column tags">
+					<h3>Mots-clés</h3>
+					<ul>
+						<li class="tag"><a href="">Mot-clé</a></li>
+						<li class="tag"><a href="">Lorem ipsum</a></li>
+						<li class="tag"><a href="">Mot-clé</a></li>
+						<li class="tag"><a href="">Lorem ipsum</a></li>
+						<li class="tag"><a href="">Mot-clé</a></li>
+						<li class="tag"><a href="">Lorem ipsum</a></li>
+						<li class="tag"><a href="">Mot-clé</a></li>
+						<li class="tag"><a href="">Lorem ipsum</a></li>
+						<li class="tag"><a href="">Mot-clé</a></li>
+						<li class="tag"><a href="">Lorem ipsum</a></li>
+						<li class="tag"><a href="">Mot-clé</a></li>
+						<li class="tag"><a href="">Lorem ipsum</a></li>
+					</ul>
+				</section>
+				<section class="footer--column">
+					<h3>Méta</h3>
+					<ul>
+						<li><a href="#">Contactez-nous</a></li>
+						<li><a href="#">Mentions légales</a></li>
+						<li><a href="#">Politique de confidentialité</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</section>
+			</div>
 		</footer>
 
         <script src="node_modules/jquery/dist/jquery.min.js"></script>

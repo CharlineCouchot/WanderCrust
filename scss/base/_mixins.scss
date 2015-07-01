@@ -43,6 +43,6 @@
     max-width: 1170px;
     padding-left:15px;
     padding-right:15px;
-  @include box-sizing(content-box);
+  	box-sizing:content-box;
   }
 }

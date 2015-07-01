@@ -1,0 +1,83 @@
+/******************************************************
+	 BASES DE STYLES ET STYLES DE BASE
+******************************************************/
+
+/* Structure
+---------------------------------------------------- */
+
+body, html {
+	min-height: 100%;
+}
+
+body {
+	background: #FFF;
+	font-family: $fontRoboto;
+	color:$clrTextGrey;
+	font-size:22px;
+	line-height:1;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing:border-box;
+	* {
+		&,
+		&:before,
+		&:after {
+			box-sizing:inherit;
+		}
+	}
+}
+
+@media print {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	
+	footer {
+		display: none;
+	}
+}
+
+a {
+	text-decoration:none;
+	&:hover {
+		text-decoration:none;
+	}
+}
+
+.wrapper {
+	@include clearfix;
+	width: 100%;
+	a {
+		color:inherit;
+		border-bottom:1px solid;
+		&:hover, &:focus {
+			border-bottom:0;
+		}
+	}
+}
+
+
+
+/* Haut de page
+---------------------------------------------------- */
+
+.back-to-top {
+	display: none;
+	a {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: 35px;
+		height: 35px;
+		text-indent: -9999px;
+		display: block;
+		&:hover {
+		}
+	}
+}
