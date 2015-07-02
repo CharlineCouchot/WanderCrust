@@ -17,7 +17,17 @@
 		color:$clrHeadersGrey;
 	}
 	.fourth {
-		@include span-columns(3 of 12);
+		@include media($desktop) 	{@include span-columns(1 of 4);}
+		@include media($tablet) 	{
+			@include span-columns(2 of 4);
+			@include omega(2n);
+			margin-bottom:15px;
+		}
+		@include media($mobile) 	{
+			@include span-columns(4 of 4);
+			@include omega();
+			& + .fourth {margin-top:15px;}
+		}
 	}
 }
 input:not([type=submit]),

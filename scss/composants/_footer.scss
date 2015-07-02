@@ -7,6 +7,7 @@
 	overflow: hidden;
 	padding-top:40px;
 	padding-bottom:30px;
+	@include media($mobile) {padding-bottom:0;}
 	> div {
 		@include container;
 	}
@@ -32,7 +33,9 @@
 			@include span-columns(2 of 4);
 			@include omega(1);
 			&:first-child {
-				width:100%;
+				margin:0 auto;
+				float: none;
+				margin-bottom: 55px;
 			}
 		}
 		@include media($mobile) {

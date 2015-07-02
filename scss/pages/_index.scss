@@ -13,38 +13,38 @@
 	}
 
 	.page--content {
-		@include media($desktop) {
+		@include media($tablet-desktop) {
 			@include span-columns(9);
 			@include omega();
 		}
+		@include media($mobile) {
+		}
 	}
 	.page--sidebar {
-		@include media($desktop) {
+		@include media($tablet-desktop) {
 			@include span-columns(3);
 			float:left;
 		}
 		@include media($tablet) {
-			@include clearfix;
-			margin-left: 195px;
-			padding-bottom:20px;
-			margin-bottom:20px;
 		}
 		@include media($mobile) {
-			margin-bottom:20px;
-			text-align:right;
 		}
 	}
 	.page--sidebar_widget {
 			
 		@include media($desktop) {margin-bottom:70px;}
-		@include media($tablet) {@include span-columns(2.6);}
-		@include media($mobile) {margin-bottom:20px;}
+		@include media($tablet) {margin-bottom:60px;}
+		@include media($mobile) {
+			margin-bottom:20px;
+			@include span-columns(2 of 4);
+			@include omega(2n);
+		}
 		h3 {
 			color:$clrYellow;
 			font-size:27px;
 			text-transform:uppercase;
 			margin-bottom:20px;
-			@include media($tablet-mobile) {
+			@include media($mobile) {
 				font-size:21px;
 				margin-bottom:10px;
 			}
@@ -72,6 +72,10 @@
 			@include media($desktop) {
 				@include span-columns(4 of 12);
 				@include omega(3n);
+			}
+			@include media($tablet) {
+				@include span-columns(6 of 12);
+				@include omega(2n);
 			}
 		}
 		.block--image {

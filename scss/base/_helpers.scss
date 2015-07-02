@@ -32,7 +32,7 @@ img {max-width:100%}
 
 //FLAGS
 .icon-country {
-	background-size:cover;
+	background-size:contain;
 	background-repeat:no-repeat;
 	background-position:center center;
 	display:block;
@@ -74,7 +74,12 @@ img {max-width:100%}
 		a {	
 			border-bottom:0;
 			color:$clrHeadersGrey;
-		}	
+		}
+		span {
+			@include media($mobile) {
+				display:none;
+			}
+		}
 		a:hover {
 			i {
 				background-color:$clrYellowActive;

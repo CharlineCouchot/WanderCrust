@@ -15,6 +15,9 @@ body {
 	color:$clrTextGrey;
 	font-size:22px;
 	line-height:1;
+	@include media($mobile) {
+		font-size:18px;
+	}
 }
 
 html {

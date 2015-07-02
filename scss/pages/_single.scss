@@ -10,20 +10,40 @@
 		background-size: cover;
 		min-height:564px;
 		position:relative;
-
+		@include media($tablet) {min-height:360px;}
+		@include media($mobile) {min-height:240px;}
 		.header--title-card {
 			background-color:$clrWhite;
-			position:absolute;
-			bottom:20px;
-			padding:20px 20px 20px 120px;
-			font-size:26px;
 			color:$clrTextLightGrey;
+			@include media($desktop) {
+				position:absolute;
+				bottom:20px;
+				padding:20px 20px 20px 120px;
+				font-size:26px;
+			}
+			@include media($tablet) {
+				padding:20px;
+				font-size:22px;
+			}
+			@include media($mobile) {
+				position:absolute;
+				bottom:10px;
+				padding:17px;
+				font-size:18px;
+				width:100%;
+			}
 		}
 		h1 {
 			color: $clrOrange;
 			margin-bottom:0;
 			text-transform:uppercase;
 			font-size:55px;
+			@include media($tablet) {
+				font-size:50px;
+			}
+			@include media($mobile) {
+				font-size:26px;
+			}
 		}
 	}
 
@@ -32,19 +52,28 @@
 	}
 
 	.page--sidebar {
-		@include media($tablet-desktop) {
+		@include media($desktop) {
 			@include span-columns(4 of 12);
 			@include omega();
 			float:right;
 			margin-top: -140px;
 			position: relative;
 		}
+		@include media($tablet) {
+			@include span-columns(3 of 12);
+			@include omega();
+			float:right;
+			margin-top: 25px;
+			position: relative;
+		}
+
 		@include media($mobile) {
 			margin-bottom:50px;
 		}
 
 		> aside {
 			margin-bottom:70px;
+			@include media($tablet) {margin-bottom:40px;}
 			@include media($mobile) {margin-bottom:50px;}
 		}
 		h3 {
@@ -52,18 +81,36 @@
 			text-transform:uppercase;
 			font-size:32px;
 			margin-bottom:25px;
+			@include media($tablet) {
+				font-size:19px;
+				line-height:22px;
+				margin-bottom:15px;
+				overflow:hidden;
+			}
+			@include media($mobile) {
+				font-size:23px;
+				line-height:25px;
+				margin-bottom:20px;
+			}
+
+
 		}
 		.venue--map {
 			width:100%;
 			height:35vh;
+			@include media($tablet) {height:20vw;}
 			@include media($mobile) {height:60vw;}
 		}
 		.venue--details {
 			padding:25px;
 			background-color:$clrBgLightGrey;
-			display:table;
+			display:table; 
 			width:100%;
 			box-sizing: border-box;
+			@include media($tablet) {
+				padding:15px;
+				font-size:18px;
+			}
 			@include media($mobile) {
 				padding:15px;
 				font-size:18px;
@@ -98,18 +145,50 @@
 					font-size:58px;
 					font-weight:700;
 					display:block;
-					
+					@include media($tablet) {
+						float:left;
+						font-size:30px;
+						padding: 6px 12px;
+						margin-right: 10px;
+						line-height:29px;
+					}
+					@include media($mobile) {
+						font-size:46px;
+						padding:10px 20px;
+					}
+				}
+				&.desktop {
+					display:none;
+					@include media($desktop) {
+						display:table-cell;
+					}
+					@include media($mobile) {
+						display:table-cell;
+					}
+				}
+				&.mobile {
+					display:none;
+					@include media($tablet) {
+						display:block;
+					}
 				}
 			}
 		
 			.ratings--container {
 				padding-left:20px;
+				@include media($tablet) {padding-left:0;}
+				@include media($mobile) {padding-left:15px;}
 			}
-			.rating {height:30px;}
+			.rating {
+				height:30px;
+				@include media($tablet) {height:15px;}
+				@include media($mobile) {height:25px;}
+			}
 			.ratings--wrap {
 				background-color:$clrYellow;
 				& + .ratings--wrap {
 					margin-top:8px;
+					@include media($tablet) {margin-top:4px;}
 				}
 			}
 			.ratings--bar {background-color:$clrBgLightGrey;}
@@ -117,6 +196,16 @@
 				font-size:20px;
 				line-height:30px;
 				padding-left:10px;
+				@include media($tablet) {
+					font-size:12px;
+					line-height:15px;
+					padding-left:5px;
+				}
+				@include media($mobile) {
+					font-size:15px;
+					line-height:25px;
+					padding-left:10px;
+				}
 			}
 		}
 		.venue--photos {
@@ -125,10 +214,22 @@
 				@include clearfix;
 			}
 			li {
-				@include span-columns(1 of 4);
-				@include omega(4n);
-				margin-bottom:20px;
+				text-align:center;
 				a {border-bottom:0;}
+				@include media($desktop) {
+					@include span-columns(1 of 4);
+					@include omega(4n);
+					margin-bottom:20px;
+				}
+				@include media($tablet) {
+					float:left;
+					width:50%;
+				}
+				@include media($mobile) {
+					@include span-columns(1 of 4);
+					@include omega(4n);
+					margin-bottom:20px;
+				}
 			}
 		}
 		.venue--share {
@@ -136,25 +237,48 @@
 				@include clearfix;
 			}
 			li {
-				@include span-columns(1 of 3);
+				@include media($desktop) {
+					@include span-columns(1 of 3);
+				}
+				@include media($tablet) {
+					@include span-columns(1 of 2);
+					@include omega(2n);
+					margin-bottom:20px;
+				}
+				@include media($mobile) {
+					@include span-columns(1 of 3);
+				}
 			}
 		}
 	}
 
 	.page--content {
 		@include media($tablet-desktop) {
-			@include span-columns(8 of 12);
+			@include span-columns(9 of 12);
 		}
-
+		@include media($tablet) {
+			margin-top:-25px;
+		}
+		@include media($mobile) {
+			margin-top:-5px;
+		}
 		h2 {
 			color:$clrYellow;
 			text-transform:uppercase;
 			font-size:38px;
 			margin-bottom:25px;
 			margin-top:50px;
+			@include media($mobile) {
+				font-size:25px;
+				margin-top:30px;
+				margin-bottom:15px;
+			}
 		}
 		p {
 			line-height:27px;
+			@include media($mobile) {
+				line-height:22px;
+			}
 		}
 	}
 	.review {
@@ -162,7 +286,8 @@
 		background-color:$clrBgLightGrey;
 		padding:25px 15px;
 		font-size:18px;
-
+		@include media($tablet) 	{padding-bottom:10px;}
+		@include media($mobile) {font-size:16px;}
 		& + .review {
 			margin-top:35px;
 		}
@@ -174,6 +299,7 @@
 		.review--author {
 			font-size:20px;
 			font-weight:900;
+			@include media($mobile) {font-size:16px;}
 		}
 		.review--date {
 			font-size:13px;
@@ -181,6 +307,7 @@
 		}
 		.review--body {
 			margin-bottom:35px;
+			@include media($mobile) {margin-bottom:20px;}
 
 			p {line-height:21px;}
 			p + p {
@@ -190,7 +317,17 @@
 		.review--ratings {
 			overflow: hidden;
 			> div {
-				@include span-columns(3 of 12);
+				@include media($desktop) 	{@include span-columns(1 of 4);}
+				@include media($tablet) 	{
+					@include span-columns(2 of 4);
+					@include omega(2n);
+					margin-bottom:15px;
+				}
+				@include media($mobile) 	{
+					@include span-columns(4 of 4);
+					@include omega();
+					& + div {margin-top:10px;}
+				}
 			}
 			.rating {height:20px;}
 			.ratings--wrap {background-color:$clrOrange;}
