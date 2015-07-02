@@ -44,3 +44,60 @@ img {max-width:100%}
 	&.br {background-image:url('flags/br.png')}
 	&.sp {background-image:url('flags/sp.png')}
 }
+
+// PROGRESSBARS
+.rating {
+	width:100%;
+}
+.ratings--wrap {
+	overflow:hidden;
+	position:relative;
+	border-radius: 3px;
+	.ratings--category {
+		color:$clrWhite;
+		text-transform:uppercase;
+		position: absolute;
+  		top: 0px;
+	}
+}
+
+
+// PAGINATION 
+.pagination {
+	display:table;
+	width:100%;
+	.pagination--prev,
+	.pagination--next {
+		display:table-cell;
+		vertical-align:middle;
+		width:50%;
+		a {	
+			border-bottom:0;
+			color:$clrHeadersGrey;
+		}	
+		a:hover {
+			i {
+				background-color:$clrYellowActive;
+			}
+			span {
+				border-bottom:1px solid;
+			}
+		}
+		
+	}
+	.pagination--prev {
+		i {margin-right:20px;}
+	}
+	.pagination--next {
+		text-align:right;
+		i {margin-left:20px;}
+	}
+	i {
+		background-color:$clrYellow;
+		color:$clrWhite;
+		display:inline-block;
+		border-radius:5px;
+		padding:10px 20px;
+
+	}
+}

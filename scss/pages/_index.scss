@@ -1,0 +1,119 @@
+/******************************************************
+   Page d'accueil
+******************************************************/
+
+.page--home {
+
+	> div {
+		@include container;
+		
+		@include media($desktop) 	{padding-top:60px;padding-bottom:60px;}
+		@include media($tablet) 	{padding-top:60px;padding-bottom:60px;}
+		@include media($mobile) 	{padding-top:30px;padding-bottom:30px;}
+	}
+
+	.page--content {
+		@include media($desktop) {
+			@include span-columns(9);
+			@include omega();
+		}
+	}
+	.page--sidebar {
+		@include media($desktop) {
+			@include span-columns(3);
+			float:left;
+		}
+		@include media($tablet) {
+			@include clearfix;
+			margin-left: 195px;
+			padding-bottom:20px;
+			margin-bottom:20px;
+		}
+		@include media($mobile) {
+			margin-bottom:20px;
+			text-align:right;
+		}
+	}
+	.page--sidebar_widget {
+			
+		@include media($desktop) {margin-bottom:70px;}
+		@include media($tablet) {@include span-columns(2.6);}
+		@include media($mobile) {margin-bottom:20px;}
+		h3 {
+			color:$clrYellow;
+			font-size:27px;
+			text-transform:uppercase;
+			margin-bottom:20px;
+			@include media($tablet-mobile) {
+				font-size:21px;
+				margin-bottom:10px;
+			}
+		}
+		ul li {
+			margin-bottom:15px;
+			font-size:20px;
+			@include media($tablet-mobile) {
+				margin-bottom:10px;
+				font-size:17px
+			}
+			a {
+				border-bottom:0;
+				color: $clrHeadersGrey;
+				&:hover {
+					border-bottom:1px solid;
+				}
+			}
+		}
+	}
+	.block {
+		@include clearfix;
+
+		.block--item {
+			@include media($desktop) {
+				@include span-columns(4 of 12);
+				@include omega(3n);
+			}
+		}
+		.block--image {
+			position:relative;
+			margin-bottom:10px;
+			img {display:block;}
+		}
+		.block--rating {
+			position:absolute;
+			bottom:0;
+			right:0;
+			background-color:$clrYellow;
+			color:$clrWhite;
+			padding:5px;
+			font-size:17px;
+		}
+		.block--info {
+			display:table;
+			width:100%;
+		}
+		.block--title,
+		.block--country {
+			display:table-cell;
+			vertical-align:top;
+		}
+		.block--title {
+			font-size:18px;
+			color:$clrOrange;
+			margin-bottom:4px;
+			float:left;
+			border-bottom:1px solid $clrWhite;
+			&:hover {
+				border-bottom-color:$clrOrange;
+			}
+		}
+		.block--country {
+			float:right;
+		}
+		.block--location {
+			color:$clrTextLightGrey;
+			font-size:15px;
+			margin-bottom:20px;
+		}
+	}
+}

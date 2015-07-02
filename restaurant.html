@@ -3,11 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Titre du restaurant</title>
-        <meta name="description" content="Un site pour tous les amoureux de la pizza, mise à l'honneur dans des restaurants excentriques et originaux.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/styles.css">
+        <title>Titre du restaurant</title>
+        
+        <meta name="description" content="Un site pour tous les amoureux de la pizza, mise à l'honneur dans des restaurants excentriques et originaux.">
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+        
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -55,20 +63,18 @@
 		</header>
 		
 		<section class="wrapper page--single">
-			<header class="page--header" style="background-image:url('');">
-				<div>
+			<header class="page--header" style="background-image:url('images/single--header.jpg');">
 					<div class="header--title-card">
 						<h1>Nom du restaurant</h1>
 						<p>San Francisco, Californie (USA)</p>
 					</div>
-				</div>
 			</header>
 
 			<article class="page--body">
 				<section class="page--sidebar">
 					<aside class="venue">
 						<div class="venue--map">
-							<div class="marker" data-lat="48.6314988,7" data-lng="6674047,17">
+							<div class="marker" data-lat="48.56894" data-lng="7.753392">
 								<p>Adresse</p>
 								<p>Rue</p>
 								<p>67000 Ville</p>
@@ -76,47 +82,67 @@
 						</div>
 
 						<div class="venue--details">
-							<i class="fa fa-map-marker"></i>
-							<p>Adresse</p>
-							<p>Rue</p>
-							<p>67000 Ville</p>
+							<div class="venue--icon">
+								<i class="fa fa-2x fa-map-marker"></i>
+							</div>
+							<div class="venue--address">
+								<p>Adresse</p>
+								<p>Rue</p>
+								<p>67000 Ville</p>
+							</div>
 						</div>
 					</aside>
 
 					<aside class="venue--ratings">
 						<h3>Note de la redaction</h3>
-						<span>6</span>
-						<div class="ratings">
-							<div class="ratings--wrap" data-rating-percent="60">
-								<div class="ratings--bar rating" data-rating-category="Nourriture"></div>
+						<div class="ratings--table">
+							<div class="ratings--note">
+								<span>6</span>
 							</div>
-							<div class="ratings--wrap" data-rating-percent="70">
-								<div class="ratings--bar rating" data-rating-category="Service"></div>
-							</div>
-							<div class="ratings--wrap" data-rating-percent="75">
-								<div class="ratings--bar rating" data-rating-category="Ambiance"></div>
-							</div>
-							<div class="ratings--wrap" data-rating-percent="60">
-								<div class="ratings--bar rating" data-rating-category="Prix"></div>
+							<div class="ratings--container">
+								<div class="ratings--wrap rating" data-rating-percent="60">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Nourriture</span>
+								</div>
+								<div class="ratings--wrap rating" data-rating-percent="70">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Service</span>
+								</div>
+								<div class="ratings--wrap rating" data-rating-percent="75">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Ambiance</span>
+								</div>
+								<div class="ratings--wrap rating" data-rating-percent="60">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Prix</span>
+								</div>
 							</div>
 						</div>
 					</aside>
 
 					<aside class="venue--ratings">
 						<h3>Note des clients</h3>
-						<span>6</span>
-						<div class="ratings">
-							<div class="ratings--wrap" data-rating-percent="60">
-								<div class="ratings--bar rating" data-rating-category="Nourriture"></div>
+						<div class="ratings--table">
+							<div class="ratings--note">
+								<span>6</span>
 							</div>
-							<div class="ratings--wrap" data-rating-percent="70">
-								<div class="ratings--bar rating" data-rating-category="Service"></div>
-							</div>
-							<div class="ratings--wrap" data-rating-percent="75">
-								<div class="ratings--bar rating" data-rating-category="Ambiance"></div>
-							</div>
-							<div class="ratings--wrap" data-rating-percent="60">
-								<div class="ratings--bar rating" data-rating-category="Prix"></div>
+							<div class="ratings--container">
+								<div class="ratings--wrap rating" data-rating-percent="60">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Nourriture</span>
+								</div>
+								<div class="ratings--wrap rating" data-rating-percent="70">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Service</span>
+								</div>
+								<div class="ratings--wrap rating" data-rating-percent="75">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Ambiance</span>
+								</div>
+								<div class="ratings--wrap rating" data-rating-percent="60">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Prix</span>
+								</div>
 							</div>
 						</div>
 					</aside>
@@ -137,9 +163,11 @@
 
 					<aside class="venue--share">
 						<h3>Partager</h3>
-						<img src="images/twitter.png" alt="">
-						<img src="images/facebook.png" alt="">
-						<img src="images/googleplus.png" alt="">
+						<ul>
+							<li><img src="images/twitter.png" alt=""></li>
+							<li><img src="images/facebook.png" alt=""></li>
+							<li><img src="images/googleplus.png" alt=""></li>
+						</ul>
 					</aside>
 				</section>
 
@@ -157,46 +185,54 @@
 						<div class="review">
 							<header>
 								<span class="review--author">Nom du client</span>
-								<date>Le 25.10.2015 à 15h13</date>
+								<date class="review--date">Le 25.10.2015 à 15h13</date>
 							</header>
 							<div class="review--body">
 								<p>Nunc facilisis ultricies massa, ac viverra libero sollicitudin nec. Nulla facilisi. Proin in aliquam ante. Etiam fermentum, urna sit amet egestas tristique, turpis lectus eleifend quam, sit amet feugiat quam magna vitae nisi. Donec nec ante eget augue placerat mattis. Phasellus cursus odio bibendum quam porta condimentum. Nunc facilisis ultricies massa, ac viverra libero sollicitudin nec. Nulla facilisi. Proin in aliquam ante. Etiam fermentum, urna sit amet egestas tristique, turpis lectus eleifend quam, sit amet feugiat quam magna vitae nisi. Donec nec ante eget augue placerat mattis. Phasellus cursus odio bibendum quam porta condimentum</p>
 							</div>
 							<div class="review--ratings ratings">
-								<div class="ratings--wrap" data-rating-percent="60">
-									<div class="ratings--bar rating" data-rating-category="Nourriture"></div>
+								<div class="ratings--wrap rating" data-rating-percent="60">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Nourriture</span>
 								</div>
-								<div class="ratings--wrap" data-rating-percent="70">
-									<div class="ratings--bar rating" data-rating-category="Service"></div>
+								<div class="ratings--wrap rating" data-rating-percent="70">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Service</span>
 								</div>
-								<div class="ratings--wrap" data-rating-percent="75">
-									<div class="ratings--bar rating" data-rating-category="Ambiance"></div>
+								<div class="ratings--wrap rating" data-rating-percent="75">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Ambiance</span>
 								</div>
-								<div class="ratings--wrap" data-rating-percent="60">
-									<div class="ratings--bar rating" data-rating-category="Prix"></div>
+								<div class="ratings--wrap rating" data-rating-percent="60">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Prix</span>
 								</div>
 							</div>
 						</div>
 						<div class="review">
 							<header>
 								<span class="review--author">Nom du client</span>
-								<date>Le 25.10.2015 à 15h13</date>
+								<date class="review--date">Le 25.10.2015 à 15h13</date>
 							</header>
 							<div class="review--body">
 								<p>Nunc facilisis ultricies massa, ac viverra libero sollicitudin nec. Nulla facilisi. Proin in aliquam ante. Etiam fermentum, urna sit amet egestas tristique, turpis lectus eleifend quam, sit amet feugiat quam magna vitae nisi. Donec nec ante eget augue placerat mattis. Phasellus cursus odio bibendum quam porta condimentum. Nunc facilisis ultricies massa, ac viverra libero sollicitudin nec. Nulla facilisi. Proin in aliquam ante. Etiam fermentum, urna sit amet egestas tristique, turpis lectus eleifend quam, sit amet feugiat quam magna vitae nisi. Donec nec ante eget augue placerat mattis. Phasellus cursus odio bibendum quam porta condimentum</p>
 							</div>
 							<div class="review--ratings ratings">
-								<div class="ratings--wrap" data-rating-percent="60">
-									<div class="ratings--bar rating" data-rating-category="Nourriture"></div>
+								<div class="ratings--wrap rating" data-rating-percent="60">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Nourriture</span>
 								</div>
-								<div class="ratings--wrap" data-rating-percent="70">
-									<div class="ratings--bar rating" data-rating-category="Service"></div>
+								<div class="ratings--wrap rating" data-rating-percent="70">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Service</span>
 								</div>
-								<div class="ratings--wrap" data-rating-percent="75">
-									<div class="ratings--bar rating" data-rating-category="Ambiance"></div>
+								<div class="ratings--wrap rating" data-rating-percent="75">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Ambiance</span>
 								</div>
-								<div class="ratings--wrap" data-rating-percent="60">
-									<div class="ratings--bar rating" data-rating-category="Prix"></div>
+								<div class="ratings--wrap rating" data-rating-percent="60">
+									<div class="ratings--bar rating"></div>
+									<span class='ratings--category'>Prix</span>
 								</div>
 							</div>
 						</div>
@@ -213,7 +249,7 @@
 								<input type="text" name="email" id="email" />
 							</div>
 							<div class="form--line">
-								<div class="form--line fourth">
+								<div class="fourth">
 									<label for="nourriture">Nourriture <span class="form--required">*</span></label>
 									<select name="nourriture" id="nourriture">
 										<option value="1">01</option>
@@ -228,7 +264,7 @@
 										<option value="10">10</option>
 									</select>
 								</div>
-								<div class="form--line fourth">
+								<div class="fourth">
 									<label for="service">Service <span class="form--required">*</span></label>
 									<select name="service" id="service">
 										<option value="1">01</option>
@@ -243,7 +279,7 @@
 										<option value="10">10</option>
 									</select>
 								</div>
-								<div class="form--line fourth">
+								<div class="fourth">
 									<label for="ambiance">Ambiance <span class="form--required">*</span></label>
 									<select name="ambiance" id="ambiance">
 										<option value="1">01</option>
@@ -258,7 +294,7 @@
 										<option value="10">10</option>
 									</select>
 								</div>
-								<div class="form--line fourth">
+								<div class="fourth">
 									<label for="prix">Prix <span class="form--required">*</span></label>
 									<select name="prix" id="prix">
 										<option value="1">01</option>
@@ -361,7 +397,8 @@
 		</footer>
 
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery-1.11.3.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>')</script>
+        <script src="//maps.googleapis.com/maps/api/js?v=3.exp&dummy=.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>

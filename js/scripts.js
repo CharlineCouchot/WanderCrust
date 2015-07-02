@@ -45,8 +45,33 @@
 			else { map.fitBounds( bounds );}
 		}
 		$(document).ready(function(){
-			$('.single--map').each(function(){
+			$('.venue--map').each(function(){
 				render_map( $(this) );
 			});
 		});
 	})(jQuery);
+
+// PROGRESS BARS
+	function moveProgressBar() {
+
+		jQuery('.ratings--wrap').each(function (index, elem) {
+			var getPercent = ($(elem).data('rating-percent') / 100);
+			var getProgressWrapWidth = $(elem).width();
+			var progressTotal =  getPercent * getProgressWrapWidth ;
+			var animationLength = 2000 ;
+
+			$(elem).find('.ratings--bar').stop().animate({
+				marginLeft: progressTotal
+			}, animationLength);
+		});
+	}
+
+	$(window).load(function(){
+		// executes when complete page is fully loaded, including all frames, objects and images
+		moveProgressBar();
+
+		
+	});
+	$(window).resize(function() {
+		moveProgressBar();
+	});

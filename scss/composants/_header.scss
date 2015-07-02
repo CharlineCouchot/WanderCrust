@@ -63,8 +63,9 @@
     position: absolute;
     top: 0;
 	left:0;
-    background-color: #FFF;
+    background-color: $clrWhite;
     padding: 15px;
+    z-index: 99;
 }
 
 
@@ -182,6 +183,7 @@
 		font-family:$fontRoboto;
 		border-radius: 3px;
 		background-color:$clrBgLightGrey;
+		margin: 0;
 		
 		@include media($desktop) {width: 865px;}
 		@include media($tablet-mobile) {width: 310px;}

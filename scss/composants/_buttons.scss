@@ -1,0 +1,28 @@
+/******************************************************
+   Boutons
+******************************************************/
+
+.btn, a.btn {
+	color:$clrWhite;
+	font-family: $fontRoboto;
+	-webkit-appearance:none !important;
+	border:none;
+	border-radius:5px;
+	padding:9px;
+	font-size:20px;
+	cursor:pointer;
+	text-transform:uppercase;
+	a, &:hover {
+		color:$clrWhite !important;
+		border-bottom:0 !important;
+	}
+
+	&.btn--orange {
+		background-color:$clrOrange;
+		&:hover {background-color:$clrOrangeActive;}
+	}
+	&.btn--yellow {
+		background-color:$clrYellow;
+		&:hover {background-color:$clrYellowActive;}
+	}
+}

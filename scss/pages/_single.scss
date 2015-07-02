@@ -1,0 +1,205 @@
+/******************************************************
+   Page de restaurant
+******************************************************/
+
+.page--single {	
+	.page--header {
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		min-height:564px;
+		position:relative;
+
+		.header--title-card {
+			background-color:$clrWhite;
+			position:absolute;
+			bottom:20px;
+			padding:20px 20px 20px 120px;
+			font-size:26px;
+			color:$clrTextLightGrey;
+		}
+		h1 {
+			color: $clrOrange;
+			margin-bottom:0;
+			text-transform:uppercase;
+			font-size:55px;
+		}
+	}
+
+	.page--body {
+		@include container;
+	}
+
+	.page--sidebar {
+		@include media($tablet-desktop) {
+			@include span-columns(4 of 12);
+			@include omega();
+			float:right;
+			margin-top: -140px;
+			position: relative;
+		}
+		@include media($mobile) {
+			margin-bottom:50px;
+		}
+
+		> aside {
+			margin-bottom:70px;
+			@include media($mobile) {margin-bottom:50px;}
+		}
+		h3 {
+			color:$clrHeadersGrey;
+			text-transform:uppercase;
+			font-size:32px;
+			margin-bottom:25px;
+		}
+		.venue--map {
+			width:100%;
+			height:35vh;
+			@include media($mobile) {height:60vw;}
+		}
+		.venue--details {
+			padding:25px;
+			background-color:$clrBgLightGrey;
+			display:table;
+			width:100%;
+			box-sizing: border-box;
+			@include media($mobile) {
+				padding:15px;
+				font-size:18px;
+			}
+			.venue--icon, .venue--address {
+				display:table-cell;
+				vertical-align:top;
+			}
+			.venue--icon {
+				width:1px;
+				padding-right:15px;
+			}
+		}
+		.venue--ratings {
+			.ratings--table {
+				display:table;
+				width:100%;
+			}
+			.ratings--note,
+			.ratings--container {
+				display:table-cell;
+				vertical-align:top;
+			}
+			.ratings--note  {
+				width:1px;
+				span {
+					padding:10px 22px;
+					color:$clrWhite;
+					border-radius:3px;
+					background-color:$clrHeadersGrey;
+					font-family:$fontRuda;
+					font-size:58px;
+					font-weight:700;
+					display:block;
+					
+				}
+			}
+		
+			.ratings--container {
+				padding-left:20px;
+			}
+			.rating {height:30px;}
+			.ratings--wrap {
+				background-color:$clrYellow;
+				& + .ratings--wrap {
+					margin-top:8px;
+				}
+			}
+			.ratings--bar {background-color:$clrBgLightGrey;}
+			.ratings--category {
+				font-size:20px;
+				line-height:30px;
+				padding-left:10px;
+			}
+		}
+		.venue--photos {
+			margin-bottom:50px;
+			ul {
+				@include clearfix;
+			}
+			li {
+				@include span-columns(1 of 4);
+				@include omega(4n);
+				margin-bottom:20px;
+				a {border-bottom:0;}
+			}
+		}
+		.venue--share {
+			ul {
+				@include clearfix;
+			}
+			li {
+				@include span-columns(1 of 3);
+			}
+		}
+	}
+
+	.page--content {
+		@include media($tablet-desktop) {
+			@include span-columns(8 of 12);
+		}
+
+		h2 {
+			color:$clrYellow;
+			text-transform:uppercase;
+			font-size:38px;
+			margin-bottom:25px;
+			margin-top:50px;
+		}
+		p {
+			line-height:27px;
+		}
+	}
+	.review {
+		border: 1px solid $clrBorderGrey;
+		background-color:$clrBgLightGrey;
+		padding:25px 15px;
+		font-size:18px;
+
+		& + .review {
+			margin-top:35px;
+		}
+		header {
+			margin-bottom:10px;
+			font-family:$fontRuda;
+			color:$clrHeadersGrey;
+		}
+		.review--author {
+			font-size:20px;
+			font-weight:900;
+		}
+		.review--date {
+			font-size:13px;
+			padding-left:10px;
+		}
+		.review--body {
+			margin-bottom:35px;
+
+			p {line-height:21px;}
+			p + p {
+				margin-bottom:20px;
+			}
+		}
+		.review--ratings {
+			overflow: hidden;
+			> div {
+				@include span-columns(3 of 12);
+			}
+			.rating {height:20px;}
+			.ratings--wrap {background-color:$clrOrange;}
+			.ratings--bar {background-color:$clrBgDarkGrey;}
+			.ratings--category {
+				font-size:13px;
+				line-height: 20px;
+				padding-left: 8px;
+			}
+		}
+	}
+}

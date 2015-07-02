@@ -1,0 +1,47 @@
+/******************************************************
+   Elements de formulaire
+******************************************************/
+
+.form--required {
+	color:$clrOrange;
+}
+.form--line {
+	margin-bottom:40px;
+	overflow:hidden;
+	label {
+		text-transform:uppercase;
+		font-family:$fontRuda;
+		margin-bottom:10px;
+		display:block;
+		font-size:22px !important;
+		color:$clrHeadersGrey;
+	}
+	.fourth {
+		@include span-columns(3 of 12);
+	}
+}
+input:not([type=submit]),
+textarea,
+select {
+	width:100%;
+	font-family:$fontRoboto;
+	padding:5px;
+	border:1px solid $clrBorderGrey;
+	outline:0;
+	font-size: 18px;
+	padding: 5px 15px 7px;
+	color: $clrTextGrey;
+	background-color:$clrWhite;
+	resize: none;
+	margin: 5px 0;
+	box-sizing:border-box;
+}
+textarea {
+	resize: vertical;
+	min-height:150px;
+}
+.form--submit {
+	input[type="submit"] {
+		@extend .btn;
+	}
+}
