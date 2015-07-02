@@ -1,0 +1,110 @@
+/******************************************************
+   Pied de page
+******************************************************/
+
+.footer {
+	background:$clrBgLightGrey;
+	overflow: hidden;
+	padding-top:40px;
+	padding-bottom:30px;
+	> div {
+		@include container;
+	}
+	h3 {
+		text-transform:uppercase;
+		font-size:36px;
+		text-align:center;
+		margin-bottom:30px;
+		color:$clrFootersGrey;
+		@include media($mobile) {
+			margin-bottom:20px;
+		}
+	}
+	a {
+		color:$clrFootersGrey;
+	}
+	
+	.footer--column {
+		@include media($desktop) {
+			@include span-columns(4 of 12);
+		}
+		@include media($tablet) {
+			@include span-columns(2 of 4);
+			@include omega(1);
+			&:first-child {
+				width:100%;
+			}
+		}
+		@include media($mobile) {
+			@include span-columns(4 of 4);
+			margin-bottom:40px;
+		}
+	}
+	ul > li {
+		list-style-type:disc;
+		list-style-position:inside;
+		font-size:24px;
+		margin-bottom:5px;
+	}
+
+	.tag {
+		background-color:$clrOrange;
+		font-family: $fontRoboto;
+		-webkit-appearance:none !important;
+		border:none;
+		border-radius:3px;
+		padding:10px 12px;
+		font-size:20px;
+		cursor:pointer;
+		font-size:18px;
+		text-transform:uppercase;
+		display:inline-block;
+		margin:5px 2px;
+		@include media($mobile) {
+			font-size:15px;
+			padding:8px 9px;
+		}
+		a {color:$clrWhite;}
+		&:hover {background-color:$clrOrangeActive;}
+	}
+	
+	.bestRated {}
+	.bestRated--item {
+		list-style:none;
+		display:table;
+		width:100%;
+		& + .bestRated--item {
+			margin-top:20px;
+		}
+	}
+	.bestRated--image {
+		display:table-cell;
+		vertical-align: top;
+		padding-right:20px;
+		    width: 80px;
+	}
+	.bestRated--details {
+		display:table-cell;
+		vertical-align: top;
+	}
+	.bestRated--title {
+		float:left;
+		color:$clrOrange;
+		font-size: 18px;
+		margin-bottom:5px;
+		font-weight: 400;
+	}
+	.bestRated--note {
+		float:left;
+		margin-top:-1px;
+		padding-left:15px;
+		font-size: 19px;
+	}
+	.bestRated--location {
+		color:$clrTextLightGrey;
+		font-size:14px;
+		@include clearfix;
+		overflow: hidden;
+    	width: 100%;
+	}
+}
